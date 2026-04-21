@@ -1,0 +1,391 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 60px 40px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.authors {
+    font-size: 1.1em;
+    margin: 25px 0 15px;
+    line-height: 1.8;
+}
+
+.authors span {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.affiliation {
+    font-size: 1em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: white;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Styles */
+section {
+    padding: 50px 60px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+section h3 {
+    font-size: 1.4em;
+    margin: 30px 0 15px;
+    color: #555;
+}
+
+section p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    text-align: justify;
+}
+
+/* Example Images */
+.example-images {
+    margin: 30px 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.example-images img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Pipeline Section */
+.pipeline-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.pipeline-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pipeline-steps {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.pipeline-steps ol {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.pipeline-steps li {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.pipeline-steps strong {
+    color: #667eea;
+}
+
+/* Evaluation Framework */
+.framework-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.framework-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.metrics {
+    background-color: #f0f4ff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-left: 4px solid #667eea;
+}
+
+.metrics ul {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.metrics li {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.metrics strong {
+    color: #667eea;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #667eea;
+    color: white;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f0f4ff;
+    transition: background-color 0.2s ease;
+}
+
+tbody td:first-child {
+    font-weight: 600;
+    color: #555;
+}
+
+.highlight-row {
+    background-color: #fff3cd !important;
+}
+
+.highlight-row:hover {
+    background-color: #ffe69c !important;
+}
+
+.best-opensource {
+    background-color: #d4edda !important;
+}
+
+.best-opensource:hover {
+    background-color: #c3e6cb !important;
+}
+
+.total-row {
+    background-color: #e7f3ff !important;
+    font-weight: 600;
+}
+
+.results-table th {
+    text-align: center;
+}
+
+.results-table td {
+    text-align: center;
+}
+
+.results-table td:first-child {
+    text-align: left;
+}
+
+/* Findings Grid */
+.findings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.finding-card {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.finding-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.finding-card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.finding-card p {
+    font-size: 1em;
+    color: #555;
+    text-align: left;
+}
+
+/* Citation */
+#citation pre {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+#citation code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: white;
+    font-size: 0.95em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 30px 25px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    .findings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    th, td {
+        padding: 10px 8px;
+    }
+}
+
+/* Utility Classes */
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
