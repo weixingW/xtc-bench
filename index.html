@@ -34,8 +34,8 @@
             <h2>Introduction</h2>
             <p>
                 Unified Multimodal Models (uMMs) aim to support both <strong>visual understanding</strong> and <strong>visual generation</strong>
-                within a shared representation. However, existing evaluation protocols assess these two capabilities independently and do not
-                examine whether they are semantically aligned.
+                within a shared representation. However, most existing evaluation protocols assess these two capabilities independently and do not
+                provide fine-grained bi-directional evaluation.
             </p>
             <p>
                 We introduce <strong>XTC-Bench</strong>, a scene-graph-grounded evaluation framework that measures cross-task visual semantic
@@ -47,8 +47,7 @@
                 <img src="./static/images/first.drawio.png" alt="Example 1: OmniGen inconsistency" style="width: 100%; margin-bottom: 10px;">
                 <img src="./static/images/second.drawio.png " alt="Example 2: BAGEL inconsistency" style="width: 100%;">
                 <p class="caption">
-                    <strong>Motivation:</strong> OmniGen can generate attribute details while failing to recognize them (top),
-                    whereas BAGEL understands relational viewpoints that it fails to render (bottom).
+                    <strong>Motivation:</strong> UMMs can generate fine-grained attribute details while failing to recognize them (top); conversely, they can understand relational viewpoints yet fail to render them accurately (bottom).
                 </p>
             </div>
         </section>
@@ -64,14 +63,13 @@
             </div>
 
             <div class="pipeline-steps">
-                <h3>Key Stages:</h3>
+                <h3>Key Steps:</h3>
                 <ol>
-                    <li><strong>Scene Graph Generation:</strong> Using Fair-PSG pipeline with kMaX-DeepLab for object detection and segmentation</li>
-                    <li><strong>Relation Refinement:</strong> Filtering and merging relations with VLM verification (Qwen3-VL-235B)</li>
+                    <li><strong>Scene Graph Generation:</strong> Using a two-stage pipeline for object detection and segmentation</li>
+                    <li><strong>Relation Refinement:</strong> Filtering and merging relations with VLM verification</li>
                     <li><strong>Attribute Generation:</strong> Dual-view approach (Semantic Spotlight + Detail Crop) for fine-grained attributes</li>
                     <li><strong>Prompt Generation:</strong> Two-stage LLM refinement for natural language generation</li>
                     <li><strong>VQA Generation:</strong> Fact-aligned question-answer pairs for objects, attributes, and relations</li>
-                    <li><strong>Graph Matching:</strong> Hungarian algorithm-based semantic matching for evaluation</li>
                 </ol>
             </div>
         </section>
@@ -529,12 +527,7 @@
                 <div class="finding-card">
                     <h3>3. Consistent Hallucination</h3>
                     <p>MMaDA-8B shows high raw CCTA (0.630) but low AW-CCTA (0.144), revealing models can be consistently
-                    wrong - a failure mode invisible to per-task metrics.</p>
-                </div>
-                <div class="finding-card">
-                    <h3>4. Architecture Matters</h3>
-                    <p>Pure AR models achieve highest mean AW-CCTA (0.387), while AR+Diffusion shows largest performance
-                    spread, indicating consistency depends on how tightly learning objectives are coupled.</p>
+                    wrong.</p>
                 </div>
             </div>
         </section>
